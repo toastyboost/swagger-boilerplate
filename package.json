@@ -1,0 +1,41 @@
+{
+  "name": "swagger-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "swagger-cli": "^4.0.4",
+    "swagger-ui-react": "^3.52.5",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "yarn build-swagger && react-scripts start",
+    "build": "react-scripts build",
+    "build-swagger": "swagger-cli bundle ./api/openapi.yaml -o ./public/openapi.json"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/swagger-ui-react": "^3.35.2"
+  }
+}

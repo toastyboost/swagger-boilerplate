@@ -1,0 +1,31 @@
+openapi: 3.0.0
+
+info:
+  description: ''
+  version: 1.0.0
+  title: swager-ui
+
+servers:
+  - url: 0.0.0.0
+    description: A local server for dev neds
+
+tags:
+  - name: user
+    description: Operations about user
+
+paths:
+  /user/{username}:
+    $ref: './paths/user/get.yaml'
+
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    User:
+      $ref: './components/schemas/user.yaml'
+  responses:
+    ErrorMessage:
+      $ref: './components/responses/error.yaml'
